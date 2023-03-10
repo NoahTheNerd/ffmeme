@@ -8,7 +8,7 @@ Just do [this](https://www.wikihow.com/Install-FFmpeg-on-Windows) and you're all
 
 ## Installing
 
-press big green code button and unzip somewhere you want lmfao
+press big green code button to download zip and unzip somewhere you want lmfao
 
 ## Usage
 Name the file you wanna fuck up badly to `input.mp4` and click one of the `.bat` files.
