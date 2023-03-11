@@ -1,12 +1,13 @@
 setlocal EnableDelayedExpansion
+set /p FileType=<config/filetype.setting
 
-ren "output.mp4" "output-!RANDOM!.mp4"
-if exist "input.mp4" (
-    ffmpeg -i "input.mp4" -b:v 50k -b:a 40k "output.mp4"
+ren "output.%FileType%" "output-!RANDOM!.%FileType%"
+if exist "input.%FileType%" (
+    ffmpeg -i "input.%FileType%" -b:v 50k -b:a 40k "output.%FileType%"
 ) else (
     rem No target file found!
     timeout /t 2
 )
-ren "input.mp4" "input-!RANDOM!.mp4"
+ren "input.%FileType%" "input-!RANDOM!.%FileType%"
 
 endlocal
