@@ -1,5 +1,5 @@
 setlocal EnableDelayedExpansion
-set /p FileType=<config/filetype.setting
+set /p FileType="File Type: "
 
 ren "output.gif" "output-!RANDOM!.gif"
 if exist "input.mp4" (

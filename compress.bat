@@ -1,5 +1,5 @@
 setlocal EnableDelayedExpansion
-set /p FileType=<config/filetype.setting
+set /p FileType="File Type: "
 
 ren "output.%FileType%" "output-!RANDOM!.%FileType%"
 if exist "input.%FileType%" (
