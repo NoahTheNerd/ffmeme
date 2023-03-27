@@ -2,12 +2,11 @@ setlocal EnableDelayedExpansion
 set /p FileType="File Type: "
 
 ren "output.gif" "output-!RANDOM!.gif"
-if exist "input.mp4" (
-    ffmpeg -i "input.mp4" "output.gif"
+if exist "input.%FileType%" (
+    ffmpeg -i "input.%FileType%" "output.gif"
 ) else (
     rem No target file found!
-    timeout /t 2
 )
-ren "input.mp4" "input-!RANDOM!.mp4"
-
+ren "input.%FileType%" "input-!RANDOM!.%FileType%"
+timeout /t 2
 endlocal
